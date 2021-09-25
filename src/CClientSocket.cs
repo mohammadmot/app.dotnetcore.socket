@@ -31,12 +31,16 @@ namespace code.socket
             // Create a TCP/IP socket
             ocClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
+            Start(strIP, nPort); // #### make it blocking mode
+
+            /*
             Thread TR_client = new Thread(delegate(object unused) { Start(strIP, nPort); });
             // problem with Linux OS:
             // #### TR_client.SetApartmentState(ApartmentState.STA); // Additional information: The calling thread must be STA, because many UI components require this.
             TR_client.IsBackground = true;
             bRunReaderThread = true;
             TR_client.Start();
+            */
         }
 
         public void Disconnect()

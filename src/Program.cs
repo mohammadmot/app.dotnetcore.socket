@@ -27,6 +27,8 @@ namespace code.socket
 
         static void Main(string[] args)
         {
+            Console.WriteLine();
+
             var configBuilder = new ConfigurationBuilder()
                     .AddJsonFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "appsettings.json"), optional: true, reloadOnChange: true);
 
