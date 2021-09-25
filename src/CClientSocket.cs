@@ -74,6 +74,10 @@ namespace code.socket
         {
             try
             {
+                // IsBound: Gets a value that indicates whether the Socket is bound to a specific local port.
+                if (ocClientSocket != null)
+                    Console.WriteLine($"Socket IsBound: {ocClientSocket.IsBound}, Connected: {ocClientSocket.Connected}");
+
                 return (ocClientSocket != null && ocClientSocket.IsBound && ocClientSocket.Connected); // !(ocClientSocket.Poll(1, SelectMode.SelectRead) && ocClientSocket.Available == 0) && ocClientSocket.IsBound);
             }
             catch (SocketException)
@@ -92,6 +96,8 @@ namespace code.socket
 
                 // connect to the remote endpoint (Sync)
                 ocClientSocket.Connect(remoteEP);
+
+                // --- just test ---> Thread.Sleep(5000);
 
                 // begin connect to the remote endpoint (Async)
                 // ocClientSocket.BeginConnect(remoteEP, new AsyncCallback(ConnectCallback), ocClientSocket);

@@ -16,5 +16,8 @@
 # kill container => don't show in [docker ps], but image is exist in [docker images]
 - docker kill 746
 
-# run 1 instance from docker images
+# run 1 instance from docker images; if exit shell make container kill
 docker run -it 4e6 sh
+
+# run 1 instance from docker images; infinit
+docker run -d 4e6
