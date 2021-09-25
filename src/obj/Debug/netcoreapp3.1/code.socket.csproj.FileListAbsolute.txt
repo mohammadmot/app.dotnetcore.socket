@@ -46,3 +46,4 @@ C:\[SourceCode]\[SourceCode]\[SourceCode]\app.dotnetcore.socket\src\obj\Debug\ne
 C:\[SourceCode]\[SourceCode]\[SourceCode]\app.dotnetcore.socket\src\obj\Debug\netcoreapp3.1\code.socket.pdb
 C:\[SourceCode]\[SourceCode]\[SourceCode]\app.dotnetcore.socket\src\obj\Debug\netcoreapp3.1\code.socket.genruntimeconfig.cache
 C:\[SourceCode]\[SourceCode]\[SourceCode]\app.dotnetcore.socket\src\bin\Debug\netcoreapp3.1\appsettings.json
+D:\[Data]\[SourceCode]\Sample\socket\code.socket\src\bin\Debug\netcoreapp3.1\appsettings.json
