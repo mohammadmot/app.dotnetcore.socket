@@ -1,3 +1,3 @@
 # influxdb.tools.webapi
 
-.net core webapi application for test InfluxDB
+.net core console application for test socket

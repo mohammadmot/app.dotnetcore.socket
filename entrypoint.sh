@@ -16,9 +16,9 @@ set -e
 # run app
 #cd $WEB_SRC_PATH/bin/Release/net5.0/
 
-service nginx start || true
+# service nginx start || true
 
 cd /app/publish/netcoreapp3.1
-dotnet ara.influxdb.webapi.tool.dll
+dotnet code.socket.dll
 
 exec "$@"

@@ -1,21 +1,23 @@
 version: '3.4'
 
 services:
-  ara.influxdb.webapi.tool:
-    image: 'ara.influxdb.webapi.tool:latest'
+  code.socket:
+    image: 'code.socket:latest'
     restart: always
-    container_name: ara.influxdb.webapi.tool
+    container_name: code.socket
     build:
       network: host
       context: .
       dockerfile: Dockerfile
     #volumes:
     #  - /app/app.proxy.Web.Host/bin/Release/net5.0/wwwroot:/var/docker_volumes/app.proxy/wwwroot
-    ports:
-      - 5200:80
-    networks:
-      - ara-network
+    
+    #ports:
+    #  - 5200:80
+    
+    #networks:
+    #  - ara-network
 
-networks:
-  ara-network:
-    external: true
+#networks:
+#  ara-network:
+#    external: true

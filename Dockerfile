@@ -1,18 +1,18 @@
-FROM registry.aranuma.com:5000/mcr.microsoft.com/dotnet/sdk:3.1 AS base  
+FROM mcr.microsoft.com/dotnet/sdk:3.1 AS base  
 
 RUN mkdir app
 WORKDIR /app
 
 COPY . /app
 
-RUN apt update && apt install -y nginx
-COPY nginx.conf /etc/nginx/sites-enabled/default
+#RUN apt update && apt install -y nginx
+#COPY nginx.conf /etc/nginx/sites-enabled/default
 
 ADD ./nuget.config  ~/.nuget/NuGet/NuGet.Config
 
 COPY . .
 
-RUN dotnet restore "/app/src/ara.influxdb.webapi.tool.csproj" --configfile=~/.nuget/NuGet/NuGet.Config
+RUN dotnet restore "/app/src/code.socket.csproj" --configfile=~/.nuget/NuGet/NuGet.Config
 
 RUN cd src
 
