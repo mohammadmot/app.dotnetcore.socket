@@ -1,8 +1,11 @@
 # project
 - .net core console application for test socket
 
-# run in docker:
-- docker-compose -f code.socket-compose.yml up -d
+# run in docker with docker compose file
+## if config file changed only
+- docker-compose -f code.socket-compose.yml up -d --force--recreate
+## if source code changed then --build
+- docker-compose -f code.socket-compose.yml up -d --build
 
 # goto running container logs
 - docker logs 746
