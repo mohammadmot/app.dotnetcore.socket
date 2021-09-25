@@ -1,0 +1,5 @@
+D:\[Data]\[SourceCode]\Sample\socket\code.socket\src\bin\Debug\netcoreapp3.1\publish\code.socket.exe
+D:\[Data]\[SourceCode]\Sample\socket\code.socket\src\bin\Debug\netcoreapp3.1\publish\code.socket.dll
+D:\[Data]\[SourceCode]\Sample\socket\code.socket\src\bin\Debug\netcoreapp3.1\publish\code.socket.deps.json
+D:\[Data]\[SourceCode]\Sample\socket\code.socket\src\bin\Debug\netcoreapp3.1\publish\code.socket.runtimeconfig.json
+D:\[Data]\[SourceCode]\Sample\socket\code.socket\src\bin\Debug\netcoreapp3.1\publish\code.socket.pdb
