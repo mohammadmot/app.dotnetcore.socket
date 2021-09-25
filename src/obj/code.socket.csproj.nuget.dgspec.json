@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\[Data]\\[SourceCode]\\Sample\\socket\\code.socket\\src\\code.socket.csproj": {}
+    "C:\\[SourceCode]\\[SourceCode]\\[SourceCode]\\app.dotnetcore.socket\\src\\code.socket.csproj": {}
   },
   "projects": {
-    "D:\\[Data]\\[SourceCode]\\Sample\\socket\\code.socket\\src\\code.socket.csproj": {
+    "C:\\[SourceCode]\\[SourceCode]\\[SourceCode]\\app.dotnetcore.socket\\src\\code.socket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\[Data]\\[SourceCode]\\Sample\\socket\\code.socket\\src\\code.socket.csproj",
+        "projectUniqueName": "C:\\[SourceCode]\\[SourceCode]\\[SourceCode]\\app.dotnetcore.socket\\src\\code.socket.csproj",
         "projectName": "code.socket",
-        "projectPath": "D:\\[Data]\\[SourceCode]\\Sample\\socket\\code.socket\\src\\code.socket.csproj",
-        "packagesPath": "C:\\Users\\mohammadmot\\.nuget\\packages\\",
-        "outputPath": "D:\\[Data]\\[SourceCode]\\Sample\\socket\\code.socket\\src\\obj\\",
+        "projectPath": "C:\\[SourceCode]\\[SourceCode]\\[SourceCode]\\app.dotnetcore.socket\\src\\code.socket.csproj",
+        "packagesPath": "C:\\Users\\ahaji\\.nuget\\packages\\",
+        "outputPath": "C:\\[SourceCode]\\[SourceCode]\\[SourceCode]\\app.dotnetcore.socket\\src\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mohammadmot\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ahaji\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -23,8 +26,9 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "http://baget.aranuma.local/v3/index.json": {},
-          "http://nexus.aranuma.com:8081/repository/nuget.org-proxy/index.json": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "http://nexus.aranuma.com:8081/repository/nuget-group/index.json": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.iranrepo.ir": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -66,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

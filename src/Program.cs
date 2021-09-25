@@ -27,20 +27,28 @@ namespace code.socket
 
         static void Main(string[] args)
         {
+
+
+
+
+
+
+
             var configBuilder = new ConfigurationBuilder()
                     .AddJsonFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "appsettings.json"), optional: true, reloadOnChange: true);
 
             var config = configBuilder.Build();
-            var v = config.GetSection("LoggerConfig");
-            var vChild = v.GetChildren(); //  ("LoggerType");
-
-            // ......
-
+            var LoggerType = config["LoggerConfig:LoggerType"];
+            var ApplicationId = config["LoggerConfig:ApplicationId"];
+            //var v = config.GetSection("LoggerConfig").GetChildren();
+            /*var vChild = v.GetChildren();*/ //  ("LoggerType");
+            Console.WriteLine($"Path> { Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "appsettings.json") }");
             LoggerConfig loggerConfig = new LoggerConfig();
             // Configure<LoggerConfig>(Configuration.GetSection("LoggerConfig"));
 
             // Check Type Of Logger
-            switch (loggerConfig.LoggerType)
+            //switch (loggerConfig.LoggerType)
+            switch (LoggerType)
             {
                 case "Serilog":
                     {
@@ -60,7 +68,7 @@ namespace code.socket
             }
 
 
-            Console.WriteLine($"Path> { Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)) }");
+            Console.WriteLine($"Path> { Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "appsettings.json") }");
 
 
             string host = "94.182.180.208"; // "127.0.0.1";
