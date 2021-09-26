@@ -29,17 +29,17 @@ namespace code.socket
         {
             Console.WriteLine();
 
+            #region read directly config file
             var configBuilder = new ConfigurationBuilder()
                     .AddJsonFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "appsettings.json"), optional: true, reloadOnChange: true);
 
             Console.WriteLine($"Path> { Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "appsettings.json") }");
 
             var config = configBuilder.Build();
+            
+            // read config file from setting
             var LoggerType = config["LoggerConfig:LoggerType"];
             var ApplicationId = config["LoggerConfig:ApplicationId"];
-
-            // LoggerConfig loggerConfig = new LoggerConfig();
-            //switch (loggerConfig.LoggerType)
 
             // Check Type Of Logger
             switch (LoggerType)
@@ -64,6 +64,35 @@ namespace code.socket
                         throw new Exception("#### LoggerType in appsettings.json is not valid.");
                     }
             }
+            #endregion
+
+            #region read section from config file
+            LoggerConfig loggerConfig = new LoggerConfig();
+            switch (loggerConfig.LoggerType)
+            {
+                case "Serilog":
+                    {
+                        System.Diagnostics.Debug.WriteLine("> LoggerType=Serilog");
+                        Console.WriteLine("> LoggerType=Serilog");
+                        break;
+                    }
+                case "Log4Net":
+                    {
+                        System.Diagnostics.Debug.WriteLine("> LoggerType=Log4Net");
+                        Console.WriteLine("> LoggerType=Log4Net");
+                        break;
+                    }
+                default:
+                    {
+                        System.Diagnostics.Debug.WriteLine("> LoggerType=default");
+                        Console.WriteLine("> LoggerType=default");
+
+                        throw new Exception("#### LoggerType in appsettings.json is not valid.");
+                    }
+            }
+            #endregion
+
+            
 
             string host = "94.182.180.208"; // "127.0.0.1";
             int port = 1234;

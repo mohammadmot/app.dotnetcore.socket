@@ -75,8 +75,8 @@ namespace code.socket
             try
             {
                 // IsBound: Gets a value that indicates whether the Socket is bound to a specific local port.
-                if (ocClientSocket != null)
-                    Console.WriteLine($"Socket IsBound: {ocClientSocket.IsBound}, Connected: {ocClientSocket.Connected}");
+                // if (ocClientSocket != null)
+                //    Console.WriteLine($"Socket IsBound: {ocClientSocket.IsBound}, bConnected: {ocClientSocket.Connected}");
 
                 return (ocClientSocket != null && ocClientSocket.IsBound && ocClientSocket.Connected); // !(ocClientSocket.Poll(1, SelectMode.SelectRead) && ocClientSocket.Available == 0) && ocClientSocket.IsBound);
             }
