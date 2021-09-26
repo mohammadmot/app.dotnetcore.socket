@@ -29,7 +29,7 @@ namespace code.socket
         {
             Console.WriteLine();
 
-            #region read directly config file
+            #region read directly config file: [parent:child]
             var configBuilder = new ConfigurationBuilder()
                     .AddJsonFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "appsettings.json"), optional: true, reloadOnChange: true);
 
@@ -66,9 +66,8 @@ namespace code.socket
             }
             #endregion
 
-            #region read section from config file
-            LoggerConfig loggerConfig = new LoggerConfig();
-            switch (loggerConfig.LoggerType)
+            #region read section from config file: GetSection("")
+            switch (config.GetSection("LoggerConfig").GetSection("LoggerType").Value)
             {
                 case "Serilog":
                     {

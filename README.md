@@ -43,3 +43,7 @@ docker run -it 4e6 sh
 ### run 1 instance from docker images; without interrupt and run infinite
 
 docker run -d 4e6
+
+### delete docker image from list (of docker images) --force delete
+
+- docker rmi -f 4e6
